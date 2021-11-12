@@ -19,6 +19,7 @@
   "homepage": "https://github.com/Piyush-Narsinghani/Intro-To-Node#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "hbs": "^4.1.2"
+    "hbs": "^4.1.2",
+    "sweetalert": "^2.1.2"
   }
 }
