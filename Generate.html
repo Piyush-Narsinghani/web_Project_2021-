@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+  <title>Home Page | Piyush Narsinghani</title></head>
+
+<body>
+    
+    <div class="container" id="cv-form">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="/">Piyush Narsinghani</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+        
+                <li class="nav-item">
+                  <a class="nav-link" href="About">About me</a>
+                </li>
+        
+                <li class="nav-item">
+                  <a class="nav-link" href="Resume">Resume</a>
+                </li>
+        
+                <li class="nav-item">
+                  <a class="nav-link" href="Download">Download</a>
+                </li>
+        
+                <li class="nav-item">
+                  <a class="nav-link" href="Feedback">Feedback</a>
+                </li>
+        
+                <li class="nav-item">
+                  <a class="nav-link" href="ContactUs">Contact Us</a>
+                </li>
+        
+              </ul>
+        
+            </div>
+          </nav>
+        <h1 class="text-center my-2">RESUME GENERATOR</h1>
+        <p class="text-center">By Piyush Narsinghani</p>
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Personal Information</h3>
+                <div class="form-group mt-2">
+                    <label for="namefield">Your Name</label>
+                    <input type="text" id="nameField" placeholder="Enter here" class="form-control">
+                </div>
+                <div class="form-group mt-2">
+                    <label for="contactField">Your Contact</label>
+                    <input type="text" id="contactField" placeholder="Enter here" class="form-control">
+                </div>
+                <div class="form-group mt-2">
+                    <label for="addressField">Your Address</label>
+                    <textarea type="text" id="addressField" placeholder="Enter here" class="form-control" rows="5">
+                    </textarea>
+                </div>
+                <p class="text-secondary my-3">Important Links</p>
+                <div class="form-group">
+                    <label for="fbFiels">Facebook</label>
+                    <input type="text" id="fbField" placeholder="Enter here" class="form-control">
+                </div>
+                <div class="form-group mt-2">
+                    <label for="instaField">Instagram</label>
+                    <input type="text" id="instaField" placeholder="Enter here" class="form-control">
+                </div>
+                <div class="form-group mt-2">
+                    <label for="linkedField">LinkedIn</label>
+                    <textarea type="text" id="linkedField" placeholder="Enter here" class="form-control"
+                        rows="5"></textarea>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h3>Professional Information</h3>
+                <div class="form-group mt-2">
+                    <label for="">Objective</label>
+                    <textarea id="objectiveField" rows="5" type="text" placeholder="Enter here" class="form-control " rows="5">
+                    </textarea>
+                </div>
+                <div class="form-group mt-2" id="we">
+                    <label for="">Work Experience</label>
+                    <textarea rows="3" type="text" placeholder="Enter here" class="form-control weField" rows="5">
+                    </textarea>
+
+                    <div class="container text-center mt-2" id="weAddButton">
+                        <button onclick="addNewWEField()" class="btn btn-primary">Add</button>
+                    </div>
+                </div>
+
+
+                <div class="form-group mt-2" id="aq">
+                    <label for="">Academic Qualification</label>
+                    <textarea rows="3" type="text" placeholder="Enter here" class="form-control eqField" rows="5">
+                    </textarea>
+                    <div class="container text-center mt-2" id="aqAddButton">
+                        <button onclick="addNewAQField()" class="btn btn-primary">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container text-center mt-3">
+            <button onclick="generateCV()" class="btn btn-primary btn-lg">Generate CV</button>
+        </div>
+
+        <center><small> Copyright &copy; 2021 Piyush Narsinghani - All Rights Reserved! </small></center>
+
+    </div>
+
+
+    <div class="container" id="cv-template">
+        <div class="row">
+            <div class="col-md-4 text-center py-5 background">
+                <!-- this is first col -->
+
+                <img src="https://www.winhelponline.com/blog/wp-content/uploads/2017/12/user.png" alt="" class="img-fluid myimg">
+                <div class="container">
+                    <p id="nameT1">name</p>
+                    <p id="contactT">Number</p>
+                    <p id="addressT">Address</p>
+                    <hr />
+                    <p><a id="fbT" href="">http://www.facebook.com/Piyush</a></p>
+                    <p><a id="instaT" href="">http://www.instagram.com/Piyush</a></p>
+                    <p><a id="linkedT" href="">http://www.LinkedIn.com/Piyush</a></p>
+                </div>
+            </div>
+
+
+            <div class="col-md-8 py-5">
+
+
+                <!-- this is second col -->
+
+
+                <h1 id="nameT2" class="text-center" style="font-weight: 980;">Aman Kumar Tiwari</h1>
+
+
+                <!-- objective card -->
+
+
+                <div class="card mt-4">
+                    <div class="card-header background">
+                        <h3>Objective</h3>
+
+                    </div>
+                    <div class="card-body">
+                        <p id="objectiveT">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit omnis maiores odio tempora
+                            eveniet voluptates animi dolore iusto earum impedit ducimus molestias ipsum quod iure
+                            pariatur, aperiam exercitationem distinctio perspiciatis deleniti recusandae totam. Laborum
+                            nisi exercitationem inventore quos eum in eius natus. Beatae facilis consequuntur, ducimus
+                            fugiat at est laborum?</p>
+                    </div>
+                </div>
+                <div class="card mt-4">
+                    <div class="card-header background">
+                        <h3>Work Experience</h3>
+
+                    </div>
+                    <div class="card-body">
+                        <ul id="weT">
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, ipsa.</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, ipsa.</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, ipsa.</li>
+
+                        </ul>
+                    </div>
+                </div>
+
+
+
+                <!-- This tab is for academic qualification -->
+                <div class="card mt-4">
+                    <div class="card-header background">
+                        <h3>Academic Qualification</h3>
+
+                    </div>
+                    <div class="card-body">
+                        <ul id="aqT">
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, ipsa.</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, ipsa.</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, ipsa.</li>
+
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="container mt-3 txt-center">
+                    <button onclick="window.print()" class="btn background">
+                        Print CV
+                    </button>
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
